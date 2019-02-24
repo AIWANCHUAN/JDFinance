@@ -1,5 +1,5 @@
 <template>
-    <Panel :class="$style.companyInfo" title="公司详情">
+    <Panel :class="$style.companyInfo" title="公司详情" :cname="cname">
         <ul :class="$style.content">
             <li>
                 <router-link to="{name:home}">
@@ -51,6 +51,12 @@ import Panel from "../core/panel.vue";
 export default {
     components: {
         Panel
+    },
+    props:{
+        cname:{
+            type:String,
+            default:''
+        }
     }
 };
 </script>
